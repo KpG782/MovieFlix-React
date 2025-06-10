@@ -11,7 +11,7 @@ import {updateSearchCount} from "@/services/appwrite";
 
 const Search = () => {
     const [searchQuery, setSearchQuery] = useState('');
-
+//ken
     const {
         data: movies,
         loading,
