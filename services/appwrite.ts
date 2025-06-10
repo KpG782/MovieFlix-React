@@ -10,7 +10,7 @@ const COLLECTION_ID = "68483e4400010ed8714f";
 
 const client = new Client()
     .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject(process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!)
+    .setProject("684423c5003c0d27a65d")
 
 const database = new Databases(client);
 
@@ -31,9 +31,7 @@ export const updateSearchCount = async (query: string, movie: Movie) => {
                COLLECTION_ID,
                existingMovie.$id,
                {
-                   $inc: {
-                       searchCount: existingMovie.searchCount + 1
-                   }
+                    count: existingMovie.count + 1
                }
            )
        } else {
@@ -43,6 +41,7 @@ export const updateSearchCount = async (query: string, movie: Movie) => {
                ID.unique(), {
                    searchTerm: query,
                    movie_id: movie.id,
+                   title: movie.title,
                    count: 1,
                    poster_url: `https://image.tmdb.org/t/p/w500${movie.poster_path}`
                }
@@ -56,3 +55,18 @@ export const updateSearchCount = async (query: string, movie: Movie) => {
     // if no document is found in Appwrite database -> 1
 
 }
+
+export const getTrendingMovies = async (): Promise<TrendingMovie[] | undefined> =>{
+    try {
+        const result = await database.listDocuments(DATABASE_ID, COLLECTION_ID, [
+            Query.limit(5),
+            Query.orderDesc('count'),
+        ])
+
+        return result.documents as unknown as TrendingMovie[];
+    }catch (error) {
+        console.log(error);
+        return undefined;
+    }
+}
+

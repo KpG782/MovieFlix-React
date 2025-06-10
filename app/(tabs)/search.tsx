@@ -2,7 +2,6 @@ import {View, Text, Image, FlatList, ActivityIndicator} from 'react-native'
 import React, {useState, useEffect} from 'react'
 import {images} from "@/constants/images";
 import MovieCard from "@/components/MovieCard";
-import {useRouter} from "expo-router";
 import useFetch from "@/services/useFetch";
 import {fetchMovies} from "@/services/api";
 import {icons} from "@/constants/icons";
@@ -27,8 +26,6 @@ const Search = () => {
 
     useEffect(() =>{
 
-        updateSearchCount(searchQuery, movies[0]);
-
         const timeoutID = setTimeout(async()=>{
             if(searchQuery.trim())
             {
@@ -40,6 +37,12 @@ const Search = () => {
 
         return () => clearTimeout(timeoutID);
     }, [searchQuery]);
+
+    useEffect(()=>{
+        if(movies?.length > 0 && movies?.[0]){
+            updateSearchCount(searchQuery, movies[0]);
+        }
+    }, [movies]);
 
     return (
         <View className={"flex-1 bg-primary"}>
