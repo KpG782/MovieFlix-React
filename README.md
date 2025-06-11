@@ -1,108 +1,108 @@
-🎬 Movie App - Built with React Native & Expo
-Welcome to your Movie App, a cross-platform React Native application created using Expo and developed in WebStorm. This app showcases a list of movies with beautiful UI components, dynamic navigation, and API-driven data—all in a clean, modern design.
+# 🎬 Movie App — React Native + Expo
 
-📺 Inspired by the YouTube tutorial: Build a Movie App with React Native & TMDB API
+A **beautiful movie browsing app** built using **React Native** and **Expo**, inspired by TMDB’s layout and API.
 
-📦 Features
-✅ Modern UI using React Native components
+> 📽️ *Inspired by [this tutorial](https://www.youtube.com/watch?v=f8Z9JyB2EIE) on building a Movie App with React Native.*
 
-✅ Movie data fetched from TMDB API
+---
 
-✅ Horizontal and vertical scrollable movie lists
+## 🚀 Features
 
-✅ Navigation between screens using React Navigation
+- 📡 Fetches data from **TMDB API**
+- 🧭 Smooth navigation with **React Navigation**
+- 🎨 Clean UI with scrollable movie carousels
+- 📱 Cross-platform with **Expo**
+- 💡 Lightweight and fast
 
-✅ Optimized for both Android and iOS via Expo
+---
 
-🚀 Getting Started
-1. Clone the Repository
-   bash
-   Copy
-   Edit
-   git clone https://github.com/your-username/movie-app.git
-   cd movie-app
-2. Install Dependencies
-   bash
-   Copy
-   Edit
-   npm install
-3. Start the Development Server
-   bash
-   Copy
-   Edit
-   npx expo start
-   Then choose:
+## 📁 Folder Structure
 
-📱 Run on Android/iOS Simulator
-
-🌐 Run on Web
-
-📲 Scan the QR Code in the Expo Go app
-
-🔧 Folder Structure
-graphql
-Copy
-Edit
 movie-app/
-├── app/                # Main app folder
-│   ├── components/     # Reusable components like MovieCard
-│   ├── screens/        # HomeScreen, MovieDetailScreen, etc.
-│   ├── config/         # API and theme config
-│   └── navigation/     # Navigation setup
-├── assets/             # Images, fonts
-├── App.js              # Entry point
-├── app.json            # Expo config
-└── package.json        # Project metadata
-🧪 Testing
-Currently manual testing is used via device or emulator. For UI testing:
+├── app/
+│ ├── components/ # Reusable components (e.g., MovieCard)
+│ ├── screens/ # Home, MovieDetail
+│ ├── config/ # API config, colors
+│ └── navigation/ # Navigation setup
+├── assets/ # Images, logos, fonts
+├── App.js # App entry point
+├── app.json # Expo configuration
+└── package.json # Project metadata
 
-Use Expo Go on a real device
+---
 
-Or Android Studio/iOS Simulator
+## 🧰 Tech Stack
 
-Automated testing will be added in future updates.
+- ⚛️ **React Native**
+- 🌍 **Expo**
+- 🔀 **React Navigation**
+- 🎥 **TMDB API**
+- 💻 **WebStorm IDE**
 
-🌐 TMDB API Setup
-This app uses The Movie Database API (TMDB).
+---
 
-Sign up at TMDB
+## 📦 Installation
 
-Go to your API settings and get your API key
+### 1. Clone the Repository
 
-Create a .env file (if applicable) or directly add the key in your config file:
+```bash
+git clone https://github.com/your-username/movie-app.git
+cd movie-app
 
-js
-Copy
-Edit
-export const TMDB_API_KEY = 'your_api_key_here';
-🛠️ Built With
-React Native
+npm install
 
-Expo
+npx expo start
+ 
+```
 
-TMDB API
 
-React Navigation
+---
 
-WebStorm IDE
+## 🔑 Setup TMDB API Key
 
-📸 Screenshots
-Add screenshots or GIFs here to showcase the UI
+This app requires a free TMDB API key.
 
-📌 Roadmap
-Add search functionality
+### 1. Get your API key
+Sign up and get your API key from [TMDB](https://www.themoviedb.org/documentation/api).
 
-Implement pagination
+### 2. Create a config file
+Inside your project, create the following file: /app/config/api.js
 
-Add genres filtering
+### 3. Add the following code:
 
-Add trailer and cast info
+```js
+export const TMDB_API_KEY = 'your_tmdb_api_key_here';
+```
+---
+## 📷 Screenshots
 
-Save favorite movies locally
+(Add screenshots here to preview your UI in action — you can drag and drop images into this section once uploaded)
 
-🤝 Contributing
-Pull requests are welcome. For major changes, please open an issue first.
+---
 
-📄 License
-This project is open-source and available under the MIT License.
+## 📌 Roadmap
 
+- [ ] Add search functionality 🔍
+- [ ] Filter by genre 🎭
+- [ ] Show cast & trailers 🎬
+- [ ] Save favorites locally ❤️
+- [ ] Dark mode support 🌙
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! If you have ideas to improve the app, feel free to fork the repo and submit a PR.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙋‍♂️ Connect
+
+- GitHub: [@your-username](https://github.com/your-username)
+- Email: your.email@example.com
