@@ -1,50 +1,108 @@
-# Welcome to your Expo app 👋
+🎬 Movie App - Built with React Native & Expo
+Welcome to your Movie App, a cross-platform React Native application created using Expo and developed in WebStorm. This app showcases a list of movies with beautiful UI components, dynamic navigation, and API-driven data—all in a clean, modern design.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+📺 Inspired by the YouTube tutorial: Build a Movie App with React Native & TMDB API
 
-## Get started
+📦 Features
+✅ Modern UI using React Native components
 
-1. Install dependencies
+✅ Movie data fetched from TMDB API
 
-   ```bash
+✅ Horizontal and vertical scrollable movie lists
+
+✅ Navigation between screens using React Navigation
+
+✅ Optimized for both Android and iOS via Expo
+
+🚀 Getting Started
+1. Clone the Repository
+   bash
+   Copy
+   Edit
+   git clone https://github.com/your-username/movie-app.git
+   cd movie-app
+2. Install Dependencies
+   bash
+   Copy
+   Edit
    npm install
-   ```
-
-2. Start the app
-
-   ```bash
+3. Start the Development Server
+   bash
+   Copy
+   Edit
    npx expo start
-   ```
+   Then choose:
 
-In the output, you'll find options to open the app in a
+📱 Run on Android/iOS Simulator
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+🌐 Run on Web
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+📲 Scan the QR Code in the Expo Go app
 
-## Get a fresh project
+🔧 Folder Structure
+graphql
+Copy
+Edit
+movie-app/
+├── app/                # Main app folder
+│   ├── components/     # Reusable components like MovieCard
+│   ├── screens/        # HomeScreen, MovieDetailScreen, etc.
+│   ├── config/         # API and theme config
+│   └── navigation/     # Navigation setup
+├── assets/             # Images, fonts
+├── App.js              # Entry point
+├── app.json            # Expo config
+└── package.json        # Project metadata
+🧪 Testing
+Currently manual testing is used via device or emulator. For UI testing:
 
-When you're ready, run:
+Use Expo Go on a real device
 
-```bash
-npm run reset-project
-```
+Or Android Studio/iOS Simulator
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Automated testing will be added in future updates.
 
-## Learn more
+🌐 TMDB API Setup
+This app uses The Movie Database API (TMDB).
 
-To learn more about developing your project with Expo, look at the following resources:
+Sign up at TMDB
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Go to your API settings and get your API key
 
-## Join the community
+Create a .env file (if applicable) or directly add the key in your config file:
 
-Join our community of developers creating universal apps.
+js
+Copy
+Edit
+export const TMDB_API_KEY = 'your_api_key_here';
+🛠️ Built With
+React Native
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Expo
+
+TMDB API
+
+React Navigation
+
+WebStorm IDE
+
+📸 Screenshots
+Add screenshots or GIFs here to showcase the UI
+
+📌 Roadmap
+Add search functionality
+
+Implement pagination
+
+Add genres filtering
+
+Add trailer and cast info
+
+Save favorite movies locally
+
+🤝 Contributing
+Pull requests are welcome. For major changes, please open an issue first.
+
+📄 License
+This project is open-source and available under the MIT License.
+

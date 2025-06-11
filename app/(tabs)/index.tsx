@@ -33,7 +33,9 @@ export default function Index() {
   return (
       <View className={"flex-1 bg-primary"}>
         <Image source={images.bg} className="absolute w-full z-0" />
-          <ScrollView className="flex-1 px-5 "
+
+
+      <ScrollView className="flex-1 px-5 "
               showsVerticalScrollIndicator={false}
               contentContainerStyle={{minHeight: "100%", paddingBottom: 10 }}>
 
@@ -81,6 +83,8 @@ export default function Index() {
                           <Text className={"text-lg text-white font-bold mt-5 mb-3"}>Latest Movies</Text>
                       </>
 
+
+                      {/*//not recommend to have two vertical lines in performance*/}
                       <FlatList
                           data={movies}
                           renderItem={({ item }) => (
